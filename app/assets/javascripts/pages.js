@@ -25,3 +25,23 @@ function changeEmployee(divEmployee) {
     divEmployee.style["color"] = 'lightgray';
   }
 }
+
+function showPolice() {
+  var employees = document.querySelectorAll('div#employees > div');
+  for (var i = 0; i < employees.length; i++) {
+    var employee = employees[i];
+    if (employee.innerHTML.indexOf("POLICE") !== -1) {
+      employee.style["display"] = "";
+    } else {
+      employee.style["display"] = "none";
+    }
+  }
+}
+
+function showAll() {
+  var employees = document.querySelectorAll('div#employees > div');
+  for (var i = 0; i < employees.length; i++) {
+    var employee = employees[i];
+    employee.style["display"] = '';
+  }
+}
